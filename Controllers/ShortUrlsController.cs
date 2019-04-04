@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using UrlShortener.Helpers;
 using UrlShortener.Models;
 using UrlShortener.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace UrlShortener.Controllers
 {

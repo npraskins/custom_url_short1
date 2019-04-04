@@ -8,5 +8,6 @@ namespace UrlShortener.Models
         
         [Required]
         public string OriginalUrl { get; set; }
+        public string WantedUrl { get; set; }
     }
 }

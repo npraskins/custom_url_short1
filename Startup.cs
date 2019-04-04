@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore
 using UrlShortener.Data;
 using UrlShortener.Services;
 
@@ -41,7 +42,10 @@ namespace UrlShortener
 
             // Add framework services.
             services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            var connection = @"Server="
+            
             services.AddDbContext<UrlShortenerContext>(options => options.UseSqlite("filename=shorturls.db"));
             services.AddScoped<IShortUrlService, ShortUrlService>();
         }
